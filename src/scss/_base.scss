@@ -1,0 +1,30 @@
+$font-path: '../assets/fonts/';
+
+@font-face {
+  src: url("#{$font-path}/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("#{$font-path}/Roboto-Medium.ttf") format("truetype");
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
+@font-face {
+  src: url("#{$font-path}/Roboto-Bold.ttf") format("truetype");
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+@font-face {
+  src: url("#{$font-path}/SourceSansPro-Semibold.otf") format("truetype");
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
