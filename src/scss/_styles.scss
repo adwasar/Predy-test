@@ -135,3 +135,31 @@
     font-size: 14px;
   }
 }
+
+.custom-slider {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .swiper-slide {
+    height: 200px;
+    background-color: $bg-hero;
+  }
+
+  &__pagination {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}
