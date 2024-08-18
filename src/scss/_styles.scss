@@ -1,3 +1,51 @@
 .custom-hero {
+  margin-top: 40px;
+  padding: 22px 15px 22px 51px;
+  display: flex;
   background-color: $bg-hero;
+  border-radius: 10px;
+  @include media-breakpoint-down(lg) {
+    padding: 22px 51px;
+    flex-direction: column;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 20px 10px;
+  }
+
+  &__title {
+    margin-top: 69px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
+  }
+  
+  &__img-container {
+    display: flex;
+    align-items: center;
+    max-width: 488px;
+    min-width: 280px;
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      margin: 30px auto;
+      flex-direction: column;
+    }
+  }
+  
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__clients-list {
+    margin: 0;
+    padding: 0;
+    gap: 12px 24px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    @include media-breakpoint-down(xl) {
+      justify-content: center;
+    }
+  }
 }
