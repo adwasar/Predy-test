@@ -13,32 +13,96 @@
   }
 
   &__title {
-    margin-top: 69px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
     @include media-breakpoint-down(lg) {
+      margin-top: 30px;
+    }
+    @include media-breakpoint-down(md) {
       margin-top: 0;
+      font-size: 32px;
     }
   }
-  
+
+  &__text {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 0.08px;
+    line-height: 150%;
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+    }
+  }
+
+  &__sub-text {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $fc-gray;
+    letter-spacing: 0.035px;
+    line-height: 150%;
+    @include media-breakpoint-down(lg) {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+  }
+
+  .custom-btn {
+    margin-top: 16px;
+    @include media-breakpoint-down(lg) {
+      margin: 10px auto 0;
+    }
+  }
+
   &__img-container {
     display: flex;
     align-items: center;
-    max-width: 488px;
-    min-width: 280px;
+    min-width: 528px;
     width: 100%;
     @include media-breakpoint-down(lg) {
-      margin: 30px auto;
+      margin-top: 20px;
+      min-width: auto;
       flex-direction: column;
     }
   }
-  
+
   &__img {
     width: 100%;
     height: auto;
   }
 
+  &__our-clients {
+    margin-top: 59px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+  }
+
+  &__clients-title {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
   &__clients-list {
     margin: 0;
     padding: 0;
+    margin-top: 10px;
     gap: 12px 24px;
     display: flex;
     flex-direction: row;
@@ -47,5 +111,27 @@
     @include media-breakpoint-down(xl) {
       justify-content: center;
     }
+  }
+
+  &__clients-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.custom-btn {
+  display: flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 16px;
+  color: $fc-white;
+  background-color: $bg-button;
+  border: none;
+  letter-spacing: 0.08px;
+  @include media-breakpoint-down(md) {
+    padding: 10px 30px;
+    font-size: 14px;
   }
 }

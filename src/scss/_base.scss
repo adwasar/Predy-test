@@ -7,12 +7,6 @@ $font-path: '../assets/fonts/';
 }
 
 @font-face {
-  src: url("#{$font-path}/Roboto-Medium.ttf") format("truetype");
-  font-family: 'Roboto';
-  font-weight: 600;
-}
-
-@font-face {
   src: url("#{$font-path}/Roboto-Bold.ttf") format("truetype");
   font-family: 'Roboto';
   font-weight: 700;
@@ -27,4 +21,5 @@ $font-path: '../assets/fonts/';
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 14px;
 }
