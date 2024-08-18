@@ -10,8 +10,8 @@ import './scss/main.scss'
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
+  spaceBetween: 17,
+  preloadImages: false, 
   pagination: {
     el: '.custom-slider__pagination',
   },

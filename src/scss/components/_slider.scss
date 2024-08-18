@@ -1,0 +1,31 @@
+.custom-slider {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  &__slides {
+    overflow: visible;
+  }
+}
+
+.custom-slide {
+  height: 372px;
+  background-color: $bg-hero;
+}
