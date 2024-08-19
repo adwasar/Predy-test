@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery'
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
 
@@ -11,7 +11,7 @@ const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
   spaceBetween: 17,
-  preloadImages: false, 
+  preloadImages: false,
   grabCursor: true,
   pagination: {
     el: '.custom-slider__pagination',
@@ -33,10 +33,40 @@ const swiper = new Swiper('.swiper', {
   },
 })
 
-const $burgerBtn = $('.custom-burger-btn');
-const $burgerMenu = $('.custom-burger-menu');
+const $burgerBtn = $('.custom-burger-btn')
+const $closePopupBtn = $('.custom-popup__btn-close')
 
-$burgerBtn.on('click', function() {
-  $(this).toggleClass('custom-burger-btn--active');
-  $burgerMenu.toggleClass('custom-burger-menu--active');
-});
+const $contactSalesBtn = $('.custom-header__contact-sales')
+const $runThePlerdy = $('.custom-hero__btn')
+const $boostMyWebsite = $('.custom-boost-me__btn')
+
+const $burgerMenu = $('.custom-burger-menu')
+const $popUp = $('.custom-popup')
+const $popUpWindow = $('.custom-popup__window')
+
+const closePopup = () => {
+  $popUp.removeClass('custom-popup--active')
+  $('body').css('overflow', 'auto');
+}
+
+const openPopup = () => {
+  $popUp.addClass('custom-popup--active')
+  $('body').css('overflow', 'hidden');
+}
+
+$burgerBtn.on('click', function () {
+  $(this).toggleClass('custom-burger-btn--active')
+  $burgerMenu.toggleClass('custom-burger-menu--active')
+})
+
+$popUp.on('click', (e) => {
+  if(!$popUpWindow.is(e.target)) {
+    closePopup()
+  }
+})
+
+$closePopupBtn.on('click', closePopup)
+
+$contactSalesBtn.on('click', openPopup);
+$runThePlerdy.on('click', openPopup);
+$boostMyWebsite.on('click', openPopup);
