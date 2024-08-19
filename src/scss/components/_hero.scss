@@ -5,6 +5,7 @@
   background-color: $bg-hero;
   border-radius: 10px;
   @include media-breakpoint-down(lg) {
+    margin-top: 10px;
     padding: 22px 51px;
     flex-direction: column;
   }
@@ -108,8 +109,8 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+    flex-wrap: wrap;
     @include media-breakpoint-down(xl) {
-      flex-wrap: wrap;
       justify-content: center;
     }
   }
