@@ -1,4 +1,4 @@
-import * as bootstrap from 'bootstrap'
+import $ from 'jquery';
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
 
@@ -32,3 +32,11 @@ const swiper = new Swiper('.swiper', {
     },
   },
 })
+
+const $burgerBtn = $('.custom-burger-btn');
+const $burgerMenu = $('.custom-burger-menu');
+
+$burgerBtn.on('click', function() {
+  $(this).toggleClass('custom-burger-btn--active');
+  $burgerMenu.toggleClass('custom-burger-menu--active');
+});
