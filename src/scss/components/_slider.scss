@@ -1,5 +1,6 @@
 .custom-slider {
   margin-top: 100px;
+  margin-bottom: 100px;
   @include media-breakpoint-down(lg) {
     margin-top: 40px;
   }
@@ -19,7 +20,8 @@
     }
   }
 
-  &__btn-prev, &__btn-next {
+  &__btn-prev,
+  &__btn-next {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,10 +38,23 @@
   }
 
   &__pagination {
+    margin-top: 10px;
     display: none;
     @include media-breakpoint-down(sm) {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: $bg-gray;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $bg-button;
   }
 
   &__slides {
