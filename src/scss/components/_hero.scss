@@ -1,11 +1,11 @@
 .custom-hero {
-  margin-top: 40px;
+  margin-top: 117px;
   padding: 22px 15px 22px 51px;
   display: flex;
   background-color: $bg-hero;
   border-radius: 10px;
   @include media-breakpoint-down(lg) {
-    margin-top: 10px;
+    margin-top: 59px;
     padding: 22px 51px;
     flex-direction: column;
   }

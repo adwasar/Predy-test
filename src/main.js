@@ -12,6 +12,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 17,
   preloadImages: false, 
+  grabCursor: true,
   pagination: {
     el: '.custom-slider__pagination',
   },

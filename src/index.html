@@ -11,33 +11,30 @@
 <body>
   <div class="wrapper">
 
-    <nav class="custom-header navbar navbar-expand-lg">
+    <nav class="custom-header">
       <div class="container">
-        <a class="navbar-brand" href="#"><img class="custom-header__logo" src="./assets/img/icons/logo.svg"
-            alt="Logo"></a>
-        <button class="custom-header__burger-btn navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="custom-header__burger-line"></span>
-          <span class="custom-header__burger-line"></span>
-          <span class="custom-header__burger-line"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+        <div class="custom-header__content">
+          <a href="#"><img class="custom-header__logo" src="./assets/img/icons/logo.svg" alt="Logo"></a>
+          <ul class="custom-header__list">
+            <li class="custom-header__nav-item">
               <a class="nav-link active" href="#">Pricing</a>
             </li>
-            <li class="nav-item">
+            <li class="custom-header__nav-item">
               <a class="nav-link" href="#">Use Cases</a>
             </li>
-            <li class="nav-item">
+            <li class="custom-header__nav-item">
               <a class="nav-link" href="#">Book a Demo</a>
             </li>
           </ul>
-          <div class="d-flex">
-            <button class="btn me-3">Sing In</button>
-            <button class="btn btn-primary">Contact sales</button>
+          <div class="custom-header__right-btns">
+            <button class="custom-header__sign-in custom-btn">Sign In</button>
+            <button class="custom-header__contact-sales custom-btn">Contact sales</button>
           </div>
+          <button class="custom-burger">
+            <span class="custom-burger__line"></span>
+            <span class="custom-burger__line"></span>
+            <span class="custom-burger__line"></span>
+          </button>
         </div>
       </div>
     </nav>

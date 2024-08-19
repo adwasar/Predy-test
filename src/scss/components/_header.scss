@@ -1,38 +1,109 @@
 .custom-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
   padding: 0;
+  width: 100%;
+  background-color: $bg-white;
   height: 77px;
   border-bottom: 1px solid $bc-header;
   @include media-breakpoint-down(lg) {
     height: 49px;
   }
 
-  &__logo {
-    width: 89px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__burger-btn {
-    position: relative;
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-family: $ff-secondary;
+    line-height: 110%;
+    font-weight: 600;
+    font-size: 18px;
+    color: $fc-gray-1;
+    @include media-breakpoint-down(lg) {
+      display: none;
+      height: 49px;
+    }
+  }
+
+  &__right-btns {
+    display: flex;
+    gap: 40px;
+    font-family: $ff-secondary;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  &__sign-in {
+    color: $fc-blue;
+    width: max-content;
+    padding: 0;
+    font-size: 18px;
+    line-height: 160%;
+    background-color: transparent;
+  }
+
+  &__contact-sales {
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  &__logo {
+    @include media-breakpoint-down(lg) {
+      width: 89px;
+    }
+  }
+}
+
+.custom-burger {
+  position: relative;
+  display: none;
+  height: 12px;
+  width: 22px;
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+  @include media-breakpoint-down(lg) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 12px;
-    width: 22px;
-    border-radius: 0;
-    border: 0;
-    &:focus {
-      box-shadow: none;
-    }
   }
 
-  &__burger-line {
+  &__line {
     position: absolute;
     height: 2px;
     width: 100%;
     border-radius: 1px;
     background-color: $fc-black;
-    transition: .4s;
+    transition: 0.4s;
+    &:nth-child(1) {
+      top: 0;
+      transform: rotate(0);
+    }
 
+    &:nth-child(2) {
+      display: block;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+}
+
+.custom-burger--active {
+  .custom-burger__line {
     &:nth-child(1) {
       top: 0;
       transform: rotate(45deg);
@@ -44,27 +115,9 @@
     }
 
     &:nth-child(3) {
-      bottom: -6px;
+      bottom: -5px;
       transform: rotate(-45deg);
       transform-origin: bottom left;
-    }
-  }
-
-  .collapsed {
-    .custom-header__burger-line {
-      &:nth-child(1) {
-        top: 0;
-        transform: rotate(0);
-      }
-
-      &:nth-child(2) {
-        display: block;
-      }
-
-      &:nth-child(3) {
-        bottom: 0;
-        transform: rotate(0);
-      }
     }
   }
 }
