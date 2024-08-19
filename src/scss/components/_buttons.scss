@@ -9,6 +9,7 @@
   background-color: $bg-button;
   border: none;
   letter-spacing: 0.08px;
+  text-wrap: nowrap;
   @include media-breakpoint-down(md) {
     padding: 10px 30px;
     font-size: 14px;
