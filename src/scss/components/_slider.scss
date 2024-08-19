@@ -1,8 +1,14 @@
 .custom-slider {
+  margin-top: 100px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
   }
 
   &__btns {
@@ -13,6 +19,22 @@
     }
   }
 
+  &__btn-prev, &__btn-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background-color: $bg-button;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .swiper-button-disabled {
+    background-color: $bg-button-disabled;
+  }
+
   &__pagination {
     display: none;
     @include media-breakpoint-down(sm) {
@@ -21,11 +43,76 @@
   }
 
   &__slides {
+    margin-top: 40px;
     overflow: visible;
+    @include media-breakpoint-down(lg) {
+      margin-top: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__title-highlight {
+    color: $fc-gray;
   }
 }
 
 .custom-slide {
+  position: relative;
+  padding: 20px;
   height: 372px;
-  background-color: $bg-hero;
+  background-color: $bg-slider;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    @include media-breakpoint-down(md) {
+      font-size: 17px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.035px;
+    z-index: 1;
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+      letter-spacing: 0.03px;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    width: 219px;
+    height: 219px;
+    background-color: $bg-blue;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    border-radius: 50%;
+  }
+
+  &__number {
+    position: absolute;
+    left: 24%;
+    top: 16%;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 130%;
+    color: $fc-white;
+  }
 }

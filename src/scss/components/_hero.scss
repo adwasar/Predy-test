@@ -68,7 +68,8 @@
   &__img-container {
     display: flex;
     align-items: center;
-    min-width: 528px;
+    // min-width: 528px;
+    min-width: 43%;
     width: 100%;
     @include media-breakpoint-down(lg) {
       margin-top: 20px;
@@ -107,8 +108,8 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    flex-wrap: wrap;
     @include media-breakpoint-down(xl) {
+      flex-wrap: wrap;
       justify-content: center;
     }
   }
