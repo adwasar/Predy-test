@@ -71,10 +71,7 @@
 
   &__img-container {
     position: relative;
-    // display: flex;
-    // align-items: center;
     height: auto;
-    // max-width: 370px;
     flex: 0 0 370px;
     @include media-breakpoint-down(lg) {
       margin-top: 31px;
@@ -91,6 +88,8 @@
   }
 
   &__img-chart {
+    animation: fadeIn 0.8s ease-out forwards;
+    
     &:nth-child(2) {
       position: absolute;
       left: -83px;
@@ -160,5 +159,18 @@
   &__clients-item {
     display: flex;
     align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) rotate(30deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
