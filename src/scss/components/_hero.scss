@@ -1,12 +1,15 @@
 .custom-hero {
   margin-top: 117px;
-  padding: 22px 15px 22px 51px;
+  padding: 53px 64px 22px 51px;
   display: flex;
+  align-items: center;
+  gap: 106px;
   background-color: $bg-hero;
   border-radius: 10px;
   @include media-breakpoint-down(lg) {
     margin-top: 59px;
     padding: 22px 51px;
+    gap: 0;
     flex-direction: column;
   }
   @include media-breakpoint-down(md) {
@@ -14,7 +17,7 @@
   }
 
   &__title {
-    margin-top: 60px;
+    margin-top: 28px;
     margin-bottom: 0;
     font-size: 40px;
     font-weight: 700;
@@ -67,20 +70,60 @@
   }
 
   &__img-container {
-    display: flex;
-    align-items: center;
-    min-width: 43%;
-    width: 100%;
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    height: auto;
+    // max-width: 370px;
+    flex: 0 0 370px;
     @include media-breakpoint-down(lg) {
-      margin-top: 20px;
-      min-width: auto;
-      flex-direction: column;
+      margin-top: 31px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 229px;
+      flex: 0 0 273px;
     }
   }
 
   &__img {
     width: 100%;
     height: auto;
+  }
+
+  &__img-chart {
+    &:nth-child(2) {
+      position: absolute;
+      left: -83px;
+      top: -45px;
+      width: 231px;
+      @include media-breakpoint-down(md) {
+        width: 115px;
+        left: -20px;
+        top: -22px;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 30px;
+      right: -62px;
+      width: 197px;
+      @include media-breakpoint-down(md) {
+        width: 99px;
+        top: 34px;
+        right: -22px;
+      }
+    }
+    &:nth-child(4) {
+      position: absolute;
+      bottom: 85px;
+      left: -132px;
+      width: 221px;
+      @include media-breakpoint-down(md) {
+        width: 110px;
+        left: -28px;
+        bottom: 72px;
+      }
+    }
   }
 
   &__our-clients {
@@ -119,4 +162,3 @@
     align-items: center;
   }
 }
-
