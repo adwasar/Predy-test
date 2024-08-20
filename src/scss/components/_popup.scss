@@ -101,6 +101,17 @@
     padding: 8px 12px;
   }
 
+  &__name-error-message, &__phone-error-message {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 12px;
+    color: $fc-red;
+  }
+
+  .iti {
+    width: 100%;
+  }
+
   &__label-phone {
     margin-top: 8px;
   }

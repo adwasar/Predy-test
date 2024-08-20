@@ -180,12 +180,15 @@
           <p class="custom-popup__sub-title">You will get an SMS with a link to the webinar</p>
           <form class="custom-popup__form">
             <label class="custom-popup__label-name" for="name">Name</label>
-            <input class="custom-popup__input-name" id="name" type="text" placeholder="Boris Johnson">
+            <input class="custom-popup__input-name" id="name" name="name" type="text" placeholder="Boris Johnson">
+            <p class="custom-popup__name-error-message"></p>
             <label class="custom-popup__label-phone" for="phone">Phone</label>
-            <input class="custom-popup__input-phone" id="phone" type="text" placeholder="XX XXX XXXX">
+            <input class="custom-popup__input-phone" id="phone" name="phone" type="text" placeholder="XX XXX XXXX"
+              inputmode="numeric">
+            <p class="custom-popup__phone-error-message"></p>
             <div class="custom-popup__btns">
               <button class="custom-popup__support-btn custom-btn">Support</button>
-              <button class="custom-popup__contact-sales-btn custom-btn">Contact sales</button>
+              <button class="custom-popup__contact-sales-btn custom-btn" type="submit">Contact sales</button>
             </div>
             <div class="custom-popup__agree-conditions">
               <input class="custom-popup__input-checkbox" id="checkbox" type="checkbox">
