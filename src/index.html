@@ -172,7 +172,34 @@
 
     <div class="custom-popup">
       <div class="custom-popup__window">
-        <button class="custom-popup__btn-close">X</button>
+        <div class="custom-popup__img-container">
+          <img class="custom-popup__img" src="./assets/img/form.jpg" alt="Podcast speaker">
+        </div>
+        <div class="custom-popup__content">
+          <h2 class="custom-popup__title">How to do a Website Audit to Improve SEO & Conversions</h2>
+          <p class="custom-popup__sub-title">You will get an SMS with a link to the webinar</p>
+          <form class="custom-popup__form">
+            <label class="custom-popup__label-name" for="name">Name</label>
+            <input class="custom-popup__input-name" id="name" type="text" placeholder="Boris Johnson">
+            <label class="custom-popup__label-phone" for="phone">Phone</label>
+            <input class="custom-popup__input-phone" id="phone" type="text" placeholder="XX XXX XXXX">
+            <div class="custom-popup__btns">
+              <button class="custom-popup__support-btn custom-btn">Support</button>
+              <button class="custom-popup__contact-sales-btn custom-btn">Contact sales</button>
+            </div>
+            <div class="custom-popup__agree-conditions">
+              <input class="custom-popup__input-checkbox" id="checkbox" type="checkbox">
+              <label class="custom-popup__label-checkbox" for="checkbox">By sending up? you agree to our <a
+                  href="#">Conditions </a>and <a href="#">Privacy
+                  Policy</a></label>
+            </div>
+          </form>
+          <div class="custom-popup__footer">
+            <img src="./assets/img/icons/logo-no-text.svg" alt="Logo">
+            <p class="custom-popup__footer-text">Powered by <a href="#">Plerdy</a></p>
+          </div>
+        </div>
+        <button class="custom-popup__btn-close"><img src="./assets/img/icons/x.svg" alt="#"></button>
       </div>
     </div>
 

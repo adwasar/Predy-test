@@ -59,11 +59,11 @@ $burgerBtn.on('click', function () {
   $burgerMenu.toggleClass('custom-burger-menu--active')
 })
 
-$popUp.on('click', (e) => {
-  if(!$popUpWindow.is(e.target)) {
-    closePopup()
+$popUp.on('click', function(e) {
+  if (!$(e.target).closest($popUpWindow).length) {
+    closePopup();
   }
-})
+});
 
 $closePopupBtn.on('click', closePopup)
 
